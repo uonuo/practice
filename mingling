@@ -7,3 +7,21 @@ public class CompanyArmy {
        }
 
 }
+
+public class Application {
+
+       public static void main(String args[]) {
+
+              CompanyArmy threecompany=new CompanyArmy();
+
+              Command command=new ConcreteCommand(threecompany);
+
+              ArmySuperior commander=new ArmySuperior();
+
+              commander.setCommand(command);
+
+              commander.startExecuteCommand();
+
+       }
+
+}
